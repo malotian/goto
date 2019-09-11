@@ -8,7 +8,7 @@ module.exports = (event, context) => {
      * remote, managed databases that would work here and maintain
      * a connection pool */
     if(event.path == "/home") {
-        redirect = "https://www.alexellis.io/";
+        redirect = "https://www.linkedin.com/in/harjinder-singh-dhanjal/";
     } else if(event.path == "/sponsors" || event.path == "/insiders") {
         redirect = "https://github.com/users/alexellis/sponsorship";
     }
@@ -19,7 +19,7 @@ module.exports = (event, context) => {
     if(!redirect) {
         return context
             .status(400)
-            .fail("Unknown short URL");
+            .fail("Unknown URL");
     }
 
     /* 302 Moved Temporarily
